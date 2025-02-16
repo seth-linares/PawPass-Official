@@ -28,4 +28,4 @@ PawPass combines the best of both worlds: incredible performance and rock-solid 
 
 Since I can't afford to pay for a code-signing certificate, you'll need to build PawPass yourself. But don't worry, it's super easy! Here's how you can get started:
 
-1. Clone the repository: `git clone https://github.com/yourusername/PawPass.git`
+1. Clone the repository: `git clone https://github.com/seth-linares/PawPass-Official.git`
