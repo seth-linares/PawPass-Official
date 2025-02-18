@@ -28,3 +28,4 @@ src-tauri/src/password_manager_backend/src/unchecked_code.md
 src-tauri/src/password_manager_backend/src/code_overview.md
 prompt.md
 /src-tauri/old_icons
+/src-tauri/src/password_manager_backend/target

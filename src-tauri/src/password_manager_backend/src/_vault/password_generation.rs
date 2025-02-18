@@ -1,5 +1,5 @@
 use std::collections::HashSet;
-use rand::SeedableRng;
+use rand::SeedableRng; // Used for ChaCha20Rng, brings over from_entropy()
 use serde::{Deserialize, Serialize};
 use crate::_vault::{ABSOLUTE_MAX_LENGTH, ABSOLUTE_MIN_LENGTH, DEFAULT_LENGTH};
 use crate::error::password_generation_error::PasswordGenerationError;

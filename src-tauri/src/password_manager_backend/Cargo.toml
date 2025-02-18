@@ -5,7 +5,7 @@ edition = "2021"
 authors = ["Seth Linares <sethlinares1@gmail.com>"]
 description = "A custom password manager backend that handles everything from storage to proper encryption!"
 license = "MIT"
-repository = "https://github.com/seth-linares/PawPassv2"
+repository = "https://github.com/seth-linares/PawPass-Official"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 

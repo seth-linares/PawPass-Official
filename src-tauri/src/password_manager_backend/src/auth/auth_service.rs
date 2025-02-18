@@ -37,10 +37,9 @@ impl AuthService {
         let (key_hierarchy, salt) = KeyHierarchy::new(password_bytes)
             .map_err(|e| AuthError::from(e))?;
 
-        let master_password_hash;
-        unsafe {
-            master_password_hash = key_hierarchy.key_derivation.derive_key(password_bytes, salt.as_slice())?.into_inner();
-        }
+        let master_password_hash = unsafe {
+            key_hierarchy.key_derivation.derive_key(password_bytes, salt.as_slice())?.into_inner()
+        };
 
         let encrypted_mek = key_hierarchy.encrypted_mek(&master_password_hash)?;
 
@@ -52,6 +51,7 @@ impl AuthService {
         };
 
         println!("Created new AuthService");
+        
         Ok((auth_service, key_hierarchy))
     }
 
@@ -62,10 +62,9 @@ impl AuthService {
         master_password: SecureMemory<String>
     ) -> Result<KeyHierarchy, AuthError> {
         let input_bytes = master_password.as_ref().as_bytes();
-        let mut input_hash;
-        unsafe {
-            input_hash = self.key_derivation.derive_key(input_bytes, self.salt.as_slice())?.into_inner();
-        }
+        let mut input_hash = unsafe {
+            self.key_derivation.derive_key(input_bytes, self.salt.as_slice())?.into_inner()
+        };
 
         if !input_hash.eq(&self.master_password_hash) {
             return Err(AuthError::InvalidPassword);
@@ -127,7 +126,8 @@ impl AuthService {
         self.encrypted_mek = key_hierarchy.encrypted_mek(&self.master_password_hash)?;
     
         old_password.zeroize();
-    
+
+        
         Ok(key_hierarchy)
     }
 
@@ -183,12 +183,13 @@ impl AuthService {
             .key_derivation
             .derive_key(password_bytes, &self.salt)?;
 
+        // 2. Compare with stored hash
         let result = derived_hash.as_ref().eq(&self.master_password_hash);
 
         drop(password);
         drop(derived_hash);
 
-        // 2. Compare with stored hash
+        
         Ok(result)
     }
 
