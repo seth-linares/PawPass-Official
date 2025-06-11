@@ -53,7 +53,7 @@ So I want to start out by walking us through the UI of PawPass. I think it's imp
 
 When you first open PawPass, you'll be greeted by our vault initialization screen. This is where you'll set up your master password, which is used to encrypt and decrypt your vault.
 
-<p style="text-align:center">
+<p align="center">
     <img src="PawPass_Images\Initialize_Vault.png" width="50%" />
 </p>
 
@@ -61,37 +61,37 @@ As you can see, there are some minimum requirements for your master password. We
 
 Once you've set up your master password, you'll be taken to the main dashboard of PawPass. This is where you can view, add, and delete your login entries.
 
-<p style="text-align:center">
+<p align="center">
     <img src="PawPass_Images\Initial_Dashboard.png" width="75%" />
 </p>
 
 If you want to add a new entry, you can click the "New Entry" button at the top of the screen. This will bring you to the next page which is where you can fill in the details of your new entry. You can add a title, username, password, URL, notes, and category. You can also mark the entry as a favorite by clicking the star icon at the top of the screen. Once you've filled in all the details, you can click the "Save" button to add the entry to your vault.
 
-<p style="text-align:center">
+<p align="center">
     <img src="PawPass_Images\Entry_Creation.png" width="75%" />
 </p>
 
 Now on this same page, you can also generate a password for your new entry. Here is a gif of the password generation in action:
 
-<p style="text-align:center">
+<p align="center">
     <img src="PawPass_Images\PawPass_Password_Generation.gif" width="75%" />
 </p>
 
 Now, once you are finished creating your entries, you can go back to your dashboard and see all of your entries. You can also search for specific entries using the search bar at the top of the screen or filter entries by category using the sidebar on the left or by favorited entries using the checkbox at the top of the screen next to the search bar. You can combine these filters to find exactly what you're looking for.
 
-<p style="text-align:center">
+<p align="center">
     <img src="PawPass_Images\PawPass_Dashboard_usage.gif" width="75%" />
 </p>
 
 I also want to show you the settings page. This is where you can select your theme, change your master password, adjust the Argon2id parameters, and more. Here is a gif of the settings page in action:
 
-<p style="text-align:center">
+<p align="center">
     <img src="PawPass_Images\PawPass_Settings.gif" width="75%" />
 </p>
 
 And finally, when you're finished using PawPass, you can log out by clicking the "Log Out" button at the top of the screen. This will clear your master password from memory and lock your vault until you enter your master password again.
 
-<p style="text-align:center">
+<p align="center">
     <img src="PawPass_Images\Login_Screen_not_silly.png" width="50%" />
 </p>
 
